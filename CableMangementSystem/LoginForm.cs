@@ -39,8 +39,13 @@ namespace CableMangementSystem
                     conn.Open();
 
                     // verify col names 
+<<<<<<< HEAD
                     SqlCommand cmdUser = new SqlCommand("SELECT EMAIL,USER_PASSWORD FROM USER_ WHERE EMAIL='"+username+"' ", conn);
                     SqlCommand cmdStaff = new SqlCommand("SELECT EMAIL,STAFF_PASSWORD FROM HUMAN_RESOURCE WHERE EMAIL= '"+username+"' ", conn);
+=======
+                    SqlCommand cmdUser = new SqlCommand($"SELECT EMAIL,USER_PASSWORD FROM USER_ WHERE EMAIL='{username}'", conn);
+                    SqlCommand cmdStaff = new SqlCommand($"SELECT EMAIL,STAFF_PASSWORD FROM HUMAN_RESOURCE WHERE EMAIL='{username}'", conn);
+>>>>>>> e77e3b92eaf58739e5cf323e7b3eb78ef61a04e2
 
                     SqlDataReader reader;
                     SqlDataReader readerStaff;
