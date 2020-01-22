@@ -146,6 +146,14 @@ namespace CableMangementSystem
 
         }
 
+        private void pendingConnectionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PendingConnections pendConn = new PendingConnections();
+            pendConn.MdiParent = this;
+            pendConn.WindowState = FormWindowState.Maximized;
+            pendConn.Show();
+        }
+
 
     }
 }

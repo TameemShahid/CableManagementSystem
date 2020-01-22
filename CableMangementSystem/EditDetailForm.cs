@@ -13,8 +13,8 @@ namespace CableMangementSystem
 {
     public partial class EditDetailForm : Form
     {
-        private int user_id;
-        private int house_id;
+        private string user_id;
+        private string house_id;
         private int check_select = 0;
         private string email;
         public EditDetailForm()
@@ -23,7 +23,7 @@ namespace CableMangementSystem
         }
         public EditDetailForm(int id)
         {
-            this.user_id = id;
+            this.user_id = id.ToString();
             InitializeComponent();
         }
 
@@ -33,7 +33,7 @@ namespace CableMangementSystem
         {
             if (check_select == 1)
             {
-                AddAddress add_address = new AddAddress(this.user_id, this.house_id);
+                AddAddress add_address = new AddAddress( int.Parse(this.user_id), int.Parse(this.house_id));
                 add_address.Show();
                 this.Close();
                 this.Dispose();
@@ -154,7 +154,7 @@ namespace CableMangementSystem
                     check_select = 1;
                     int index = e.RowIndex;
                     DataGridViewRow selectedrow = dataGridView1.Rows[index];
-                    this.house_id = Convert.ToInt32(selectedrow.Cells[0].Value);
+                    this.house_id = selectedrow.Cells[0].Value.ToString();
                 }
 
             }
@@ -180,7 +180,7 @@ namespace CableMangementSystem
             dataGridView1.DataSource = dt;
 
             con.Close();
-            dataGridView1.Columns[0].Visible = false;
+           dataGridView1.Columns[0].Visible = false;
         }
 
         private void button3_Click(object sender, EventArgs e)

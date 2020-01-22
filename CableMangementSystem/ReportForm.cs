@@ -36,7 +36,7 @@ namespace CableMangementSystem
                 SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
 
                 conn.Open();
-                SqlCommand command = new SqlCommand("SELECT * FROM HISTORY", conn);
+                SqlCommand command = new SqlCommand("SELECT * FROM SHOW_HISTORY", conn);
                 //commad.CommandType = CommandType.StoredProcedure;
 
 

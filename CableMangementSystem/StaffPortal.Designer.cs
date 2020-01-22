@@ -45,6 +45,7 @@
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.billingHistoryToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pendingConnectionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -145,7 +146,8 @@
             // 
             this.showToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showInventoryToolStripMenuItem,
-            this.showCityToolStripMenuItem});
+            this.showCityToolStripMenuItem,
+            this.pendingConnectionsToolStripMenuItem});
             this.showToolStripMenuItem.Name = "showToolStripMenuItem";
             this.showToolStripMenuItem.Size = new System.Drawing.Size(48, 22);
             this.showToolStripMenuItem.Text = "Show";
@@ -187,6 +189,13 @@
             this.inventoryToolStripMenuItem.Text = "Inventory";
             this.inventoryToolStripMenuItem.Click += new System.EventHandler(this.InventoryToolStripMenuItem_Click);
             // 
+            // pendingConnectionsToolStripMenuItem
+            // 
+            this.pendingConnectionsToolStripMenuItem.Name = "pendingConnectionsToolStripMenuItem";
+            this.pendingConnectionsToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.pendingConnectionsToolStripMenuItem.Text = "Pending Connections";
+            this.pendingConnectionsToolStripMenuItem.Click += new System.EventHandler(this.pendingConnectionsToolStripMenuItem_Click);
+            // 
             // StaffPortal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,5 +233,6 @@
         private System.Windows.Forms.ToolStripMenuItem showCityToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem billingHistoryToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem inventoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pendingConnectionsToolStripMenuItem;
     }
 }
