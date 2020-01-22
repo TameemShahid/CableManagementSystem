@@ -192,3 +192,5 @@ E:\CableManagementSystem\CableManagementSystem\CableMangementSystem\obj\Debug\Ca
 E:\CableManagementSystem\CableManagementSystem\CableMangementSystem\obj\Debug\CableMangementSystem.pdb
 E:\CableManagementSystem\CableManagementSystem\CableMangementSystem\obj\Debug\CableMangementSystem.csprojResolveAssemblyReference.cache
 E:\CableManagementSystem\CableManagementSystem\CableMangementSystem\obj\Debug\CableMangementSystem.ConnStr.resources
+D:\CableOperatorManagementSystem\CableMangementSystem\obj\Debug\CableMangementSystem.AddAddress.resources
+D:\CableOperatorManagementSystem\CableMangementSystem\obj\Debug\CableMangementSystem.ConnStr.resources

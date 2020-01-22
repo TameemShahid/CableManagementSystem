@@ -42,10 +42,10 @@
             this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showInventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showCityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pendingConnectionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.billingHistoryToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.inventoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pendingConnectionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -166,6 +166,13 @@
             this.showCityToolStripMenuItem.Text = "Show Provider Information";
             this.showCityToolStripMenuItem.Click += new System.EventHandler(this.ShowCityToolStripMenuItem_Click);
             // 
+            // pendingConnectionsToolStripMenuItem
+            // 
+            this.pendingConnectionsToolStripMenuItem.Name = "pendingConnectionsToolStripMenuItem";
+            this.pendingConnectionsToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            this.pendingConnectionsToolStripMenuItem.Text = "Pending Connections";
+            this.pendingConnectionsToolStripMenuItem.Click += new System.EventHandler(this.pendingConnectionsToolStripMenuItem_Click);
+            // 
             // reportToolStripMenuItem
             // 
             this.reportToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -178,23 +185,16 @@
             // billingHistoryToolStripMenuItem1
             // 
             this.billingHistoryToolStripMenuItem1.Name = "billingHistoryToolStripMenuItem1";
-            this.billingHistoryToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.billingHistoryToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
             this.billingHistoryToolStripMenuItem1.Text = "Billing History";
             this.billingHistoryToolStripMenuItem1.Click += new System.EventHandler(this.BillingHistoryToolStripMenuItem1_Click);
             // 
             // inventoryToolStripMenuItem
             // 
             this.inventoryToolStripMenuItem.Name = "inventoryToolStripMenuItem";
-            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.inventoryToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
             this.inventoryToolStripMenuItem.Text = "Inventory";
             this.inventoryToolStripMenuItem.Click += new System.EventHandler(this.InventoryToolStripMenuItem_Click);
-            // 
-            // pendingConnectionsToolStripMenuItem
-            // 
-            this.pendingConnectionsToolStripMenuItem.Name = "pendingConnectionsToolStripMenuItem";
-            this.pendingConnectionsToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.pendingConnectionsToolStripMenuItem.Text = "Pending Connections";
-            this.pendingConnectionsToolStripMenuItem.Click += new System.EventHandler(this.pendingConnectionsToolStripMenuItem_Click);
             // 
             // StaffPortal
             // 
@@ -207,6 +207,7 @@
             this.Name = "StaffPortal";
             this.Text = "Staff Portal";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.StaffPortal_FormClosing);
             this.Load += new System.EventHandler(this.StaffPortal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

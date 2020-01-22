@@ -154,6 +154,9 @@ namespace CableMangementSystem
             pendConn.Show();
         }
 
-
+        private void StaffPortal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

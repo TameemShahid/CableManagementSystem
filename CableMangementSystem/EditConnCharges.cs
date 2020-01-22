@@ -31,7 +31,7 @@ namespace CableMangementSystem
         {
             try
             {
-                SqlConnection conn = new SqlConnection("Data Source=DESKTOP-Q0O569Q;Initial Catalog=CabelDB;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                 conn.Open();
 
                 SqlCommand cmd = new SqlCommand("SELECT * FROM CONNECTION;", conn);

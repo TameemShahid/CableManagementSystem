@@ -17,6 +17,8 @@ namespace CableMangementSystem
         public SignUpForm()
         {
             InitializeComponent();
+            pwd_box.PasswordChar = '*';
+            pwd_box.MaxLength = 10;
         }
 
         private void SignUpForm_Load(object sender, EventArgs e)

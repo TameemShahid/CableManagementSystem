@@ -42,7 +42,7 @@
             // name_box
             // 
             this.name_box.Location = new System.Drawing.Point(86, 64);
-            this.name_box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.name_box.Margin = new System.Windows.Forms.Padding(2);
             this.name_box.MaxLength = 20;
             this.name_box.Name = "name_box";
             this.name_box.Size = new System.Drawing.Size(363, 20);
@@ -51,7 +51,7 @@
             // email_box
             // 
             this.email_box.Location = new System.Drawing.Point(86, 99);
-            this.email_box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.email_box.Margin = new System.Windows.Forms.Padding(2);
             this.email_box.MaxLength = 50;
             this.email_box.Name = "email_box";
             this.email_box.Size = new System.Drawing.Size(363, 20);
@@ -60,16 +60,17 @@
             // pwd_box
             // 
             this.pwd_box.Location = new System.Drawing.Point(86, 133);
-            this.pwd_box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pwd_box.Margin = new System.Windows.Forms.Padding(2);
             this.pwd_box.MaxLength = 10;
             this.pwd_box.Name = "pwd_box";
+            this.pwd_box.PasswordChar = '*';
             this.pwd_box.Size = new System.Drawing.Size(363, 20);
             this.pwd_box.TabIndex = 2;
             // 
             // phone_box
             // 
             this.phone_box.Location = new System.Drawing.Point(86, 168);
-            this.phone_box.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.phone_box.Margin = new System.Windows.Forms.Padding(2);
             this.phone_box.MaxLength = 11;
             this.phone_box.Name = "phone_box";
             this.phone_box.Size = new System.Drawing.Size(363, 20);
@@ -78,7 +79,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(86, 202);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(362, 26);
             this.button1.TabIndex = 4;
@@ -137,7 +138,7 @@
             this.Controls.Add(this.pwd_box);
             this.Controls.Add(this.email_box);
             this.Controls.Add(this.name_box);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SignUpForm";
             this.Text = "SignUpForm";
             this.Load += new System.EventHandler(this.SignUpForm_Load);

@@ -33,7 +33,7 @@ namespace CableMangementSystem
                 {
                     SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("LOAD_HISTORY_DATA", conn);
+                    SqlCommand cmd = new SqlCommand("LOAD_HISTORY_BY_PAID", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     SqlDataAdapter sqlda = new SqlDataAdapter(cmd);
 
@@ -86,7 +86,7 @@ namespace CableMangementSystem
                 {
                     SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                     conn.Open();
-                    SqlCommand cmd = new SqlCommand("LOAD_HISTORY_BY_PAID", conn);
+                    SqlCommand cmd = new SqlCommand("LOAD_HISTORY_DATA", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     SqlDataAdapter sqlda = new SqlDataAdapter(cmd);
 
