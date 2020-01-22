@@ -9,6 +9,5 @@ namespace CableMangementSystem
     public static class ConnectionString
     {
         public static string connectionString = "Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True";
-        
     }
 }
