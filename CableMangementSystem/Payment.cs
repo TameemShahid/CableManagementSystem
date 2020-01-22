@@ -37,7 +37,7 @@ namespace CableMangementSystem
         {
             try
             {
-                SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                 conn.Open();
 
                 SqlCommand cmd = new SqlCommand("ADD_PAYMENT", conn);

@@ -190,3 +190,5 @@ E:\CableManagementSystem\CableManagementSystem\CableMangementSystem\obj\Debug\Ca
 E:\CableManagementSystem\CableManagementSystem\CableMangementSystem\obj\Debug\CableMangementSystem.csproj.GenerateResource.Cache
 E:\CableManagementSystem\CableManagementSystem\CableMangementSystem\obj\Debug\CableMangementSystem.exe
 E:\CableManagementSystem\CableManagementSystem\CableMangementSystem\obj\Debug\CableMangementSystem.pdb
+E:\CableManagementSystem\CableManagementSystem\CableMangementSystem\obj\Debug\CableMangementSystem.csprojResolveAssemblyReference.cache
+E:\CableManagementSystem\CableManagementSystem\CableMangementSystem\obj\Debug\CableMangementSystem.ConnStr.resources

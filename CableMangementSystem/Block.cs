@@ -30,7 +30,7 @@ namespace CableMangementSystem
             try
             {
                 comboBox1.Items.Clear();
-                SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("LOAD_CITY", conn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -54,23 +54,12 @@ namespace CableMangementSystem
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            comboBox2.Enabled = true;
-            var city = comboBox1.Text;
-            SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("SELECT AREA FROM AREA WHERE CITY_NO = (SELECT CITY_NO FROM CITY WHERE CITY='QUETTA')", conn);
-            SqlDataReader reader;
-
-            reader = cmd.ExecuteReader();
-            while(reader.Read())
-=======
             try
             {
                 comboBox2.Enabled = true;
                 comboBox2.Items.Clear();
 
-                SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                 conn.Open();
 
                 SqlCommand cmd = new SqlCommand("LOAD_AREA_BY_CITY", conn);
@@ -87,7 +76,6 @@ namespace CableMangementSystem
                 conn.Close();
             }
             catch (Exception ex)
->>>>>>> e77e3b92eaf58739e5cf323e7b3eb78ef61a04e2
             {
 
                 MessageBox.Show(ex.ToString());
@@ -107,7 +95,7 @@ namespace CableMangementSystem
             {
                 try
                 {
-                    SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+                    SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                     conn.Open();
 
                     SqlCommand cmd = new SqlCommand("ADD_BLOCK", conn);

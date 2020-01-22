@@ -27,7 +27,7 @@ namespace CableMangementSystem
         {
             try
             {
-                SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("RET_ID_FOR_CITY", conn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -63,7 +63,7 @@ namespace CableMangementSystem
         {
             try
             {
-                SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("LOAD_CITY", conn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
