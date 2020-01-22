@@ -36,39 +36,40 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.showHistoryToolStripMenuItem,
             this.editDetailsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 33);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
+            this.menuStrip1.Size = new System.Drawing.Size(533, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // showHistoryToolStripMenuItem
             // 
             this.showHistoryToolStripMenuItem.Name = "showHistoryToolStripMenuItem";
-            this.showHistoryToolStripMenuItem.Size = new System.Drawing.Size(134, 29);
+            this.showHistoryToolStripMenuItem.Size = new System.Drawing.Size(89, 22);
             this.showHistoryToolStripMenuItem.Text = "Show History";
             this.showHistoryToolStripMenuItem.Click += new System.EventHandler(this.ShowHistoryToolStripMenuItem_Click);
             // 
             // editDetailsToolStripMenuItem
             // 
             this.editDetailsToolStripMenuItem.Name = "editDetailsToolStripMenuItem";
-            this.editDetailsToolStripMenuItem.Size = new System.Drawing.Size(116, 29);
+            this.editDetailsToolStripMenuItem.Size = new System.Drawing.Size(77, 22);
             this.editDetailsToolStripMenuItem.Text = "Edit Details";
             this.editDetailsToolStripMenuItem.Click += new System.EventHandler(this.EditDetailsToolStripMenuItem_Click);
             // 
             // UserForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(533, 292);
             this.Controls.Add(this.menuStrip1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UserForm";
             this.Text = "User Form";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

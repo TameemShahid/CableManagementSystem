@@ -14,6 +14,7 @@ namespace CableMangementSystem
     public partial class UserForm : Form
     {
         private string email;
+        private int id;
 
         public UserForm()
         {
@@ -38,7 +39,7 @@ namespace CableMangementSystem
 
                 conn.Open();
                 // verify col 
-                SqlCommand cmd = new SqlCommand($"SELECT USER_ID FROM USER_INFO WHERE EMAIL='{this.email}'", conn);
+                SqlCommand cmd = new SqlCommand("SELECT USER_ID FROM USER_ WHERE EMAIL= '"+this.email+"' ", conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
@@ -57,13 +58,13 @@ namespace CableMangementSystem
 
         private void UserForm_Load(object sender, EventArgs e)
         {
-            int id = GetIdFromEmail();
-            MessageBox.Show($"Welcome User With Id {id}");
+            this.id = GetIdFromEmail();
+            MessageBox.Show("Welcome User With Id "+this.id);
         }
 
         private void ShowHistoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowHistoryForm historyForm = new ShowHistoryForm(this.email);
+            ShowHistoryForm historyForm = new ShowHistoryForm(this.id,this.email);
             historyForm.MdiParent = this;
             historyForm.WindowState = FormWindowState.Maximized;
             historyForm.Show();
@@ -71,7 +72,7 @@ namespace CableMangementSystem
 
         private void EditDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditDetailForm detail = new EditDetailForm();
+            EditDetailForm detail = new EditDetailForm(this.id);
             detail.MdiParent = this;
             detail.WindowState = FormWindowState.Maximized;
             detail.Show();

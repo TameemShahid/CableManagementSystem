@@ -29,11 +29,24 @@ namespace CableMangementSystem
 
         private void EditConnCharges_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'cableMDBDataSet.CONNECTION' table. You can move, or remove it, as needed.
-            this.cONNECTIONTableAdapter.Fill(this.cableMDBDataSet.CONNECTION);
-            // TODO: This line of code loads data into the 'cableMDBDataSet.CONNECTION' table. You can move, or remove it, as needed.
-            this.cONNECTIONTableAdapter.Fill(this.cableMDBDataSet.CONNECTION);
+            try
+            {
+                SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
+                conn.Open();
 
+                SqlCommand cmd = new SqlCommand("SELECT * FROM CONNECTION;", conn);
+                SqlDataAdapter adp = new SqlDataAdapter(cmd);
+
+                DataSet ds = new DataSet();
+                adp.Fill(ds);
+                dataGridView1.ReadOnly = true;
+                dataGridView1.DataSource = ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
@@ -44,14 +57,7 @@ namespace CableMangementSystem
 
         private void fillByToolStripButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                this.cONNECTIONTableAdapter.FillBy(this.cableMDBDataSet.CONNECTION);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
+            
 
         }
 
@@ -63,7 +69,7 @@ namespace CableMangementSystem
                 {
                     var conn_id = dataGridView1.SelectedRows[0].Cells[0].Value;
 
-                    SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+                    SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("EDIT_CONN_CHRG_PROC", conn);
                     cmd.CommandType = CommandType.StoredProcedure;

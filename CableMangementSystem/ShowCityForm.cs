@@ -31,7 +31,7 @@ namespace CableMangementSystem
 
                 while (reader.Read())
                 {
-                    cities.Add(reader["CITY_NAME"].ToString());
+                    cities.Add(reader["CITY"].ToString());
                 }
 
                 foreach (string item in cities)
@@ -57,7 +57,7 @@ namespace CableMangementSystem
                  
                 SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                 conn.Open();
-                SqlCommand cmd = new SqlCommand($"SELECT CITY_NO FROM CITY WHERE CITY_NAME='{city}'",conn);
+                SqlCommand cmd = new SqlCommand("SELECT CITY_NO FROM CITY WHERE CITY= '"+city+"' ",conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
@@ -89,14 +89,14 @@ namespace CableMangementSystem
                 int cityId = GetCityId(city);
 
                 conn.Open();
-                SqlCommand cmd = new SqlCommand($"SELECT AREA_NAME FROM AREA WHERE AREA.CITY_NO={cityId}", conn);
+                SqlCommand cmd = new SqlCommand("SELECT AREA FROM AREA WHERE AREA.CITY_NO='"+cityId+"' ", conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 List<string> areas = new List<string>();
 
                 while (reader.Read())
                 {
-                    areas.Add(reader["AREA_NAME"].ToString());
+                    areas.Add(reader["AREA"].ToString());
                 }
 
                 foreach (string item in areas)
@@ -123,7 +123,7 @@ namespace CableMangementSystem
                  
                 SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                 conn.Open();
-                SqlCommand cmd = new SqlCommand($"SELECT AREA_NO FROM AREA WHERE AREA_NAME='{area}'",conn);
+                SqlCommand cmd = new SqlCommand("SELECT AREA_NO FROM AREA WHERE AREA='"+area+"' ",conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 while (reader.Read())
@@ -154,14 +154,14 @@ namespace CableMangementSystem
                 int areaId = GetAreaId(area);
 
                 conn.Open();
-                SqlCommand cmd = new SqlCommand($"SELECT BLOCK_NAME FROM BLOCK WHERE BLOCK.AREA_NO={areaId}",conn);
+                SqlCommand cmd = new SqlCommand("SELECT BLOCK FROM BLOCK WHERE BLOCK.AREA_NO='"+areaId+"' ",conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 List<string> blocks = new List<string>();
 
                 while (reader.Read())
                 {
-                    blocks.Add(reader["BLOCK_NAME"].ToString());
+                    blocks.Add(reader["BLOCK"].ToString());
                 }
 
                 foreach (string item in blocks)

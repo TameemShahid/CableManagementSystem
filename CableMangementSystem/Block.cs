@@ -32,7 +32,7 @@ namespace CableMangementSystem
         {
             comboBox2.Enabled = true;
             var city = comboBox1.Text;
-            SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
             conn.Open();
             SqlCommand cmd = new SqlCommand("SELECT AREA FROM AREA WHERE CITY_NO = (SELECT CITY_NO FROM CITY WHERE CITY='QUETTA')", conn);
             SqlDataReader reader;

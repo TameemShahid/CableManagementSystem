@@ -36,7 +36,7 @@ namespace CableMangementSystem
 
         private void AddItemButton_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
             if (textBox1.Text == "")
             { MessageBox.Show("Text box cannot be empty"); }
             else

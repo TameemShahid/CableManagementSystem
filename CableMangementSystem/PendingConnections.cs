@@ -24,7 +24,7 @@ namespace CableMangementSystem
             LoadDataGridView();
             try
             {
-                SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("LOAD_CONN_CHRG", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -67,7 +67,7 @@ namespace CableMangementSystem
                     var address_id = dataGridView1.SelectedRows[0].Cells[0].Value;
                     var charges = comboBox1.Text;
 
-                    SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+                    SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("RET_CONN_ID_FOR_AMOUNT", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -104,7 +104,7 @@ namespace CableMangementSystem
         {
             try
             {
-                SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                 conn.Open();
                 SqlCommand command = new SqlCommand("LOAD_PENDING_CONN", conn);
                 command.CommandType = CommandType.StoredProcedure;

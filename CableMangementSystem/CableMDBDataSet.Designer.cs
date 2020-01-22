@@ -6474,17 +6474,12 @@ SELECT CONNECTION_ID, AMOUNT, DESCRIPTION, START_DATE, END_DATE FROM CONNECTION 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT CONNECTION_ID, AMOUNT, DESCRIPTION, START_DATE, END_DATE FROM dbo.CONNECTI" +
                 "ON";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT CONNECTION_ID, AMOUNT, DESCRIPTION, START_DATE, END_DATE FROM dbo.CONNECTI" +
-                "ON";
-            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6509,19 +6504,6 @@ SELECT CONNECTION_ID, AMOUNT, DESCRIPTION, START_DATE, END_DATE FROM CONNECTION 
             CableMDBDataSet.CONNECTIONDataTable dataTable = new CableMDBDataSet.CONNECTIONDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillBy(CableMDBDataSet.CONNECTIONDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6690,6 +6672,11 @@ SELECT CONNECTION_ID, AMOUNT, DESCRIPTION, START_DATE, END_DATE FROM CONNECTION 
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(decimal AMOUNT, string DESCRIPTION, System.DateTime START_DATE, global::System.Nullable<global::System.DateTime> END_DATE, decimal Original_CONNECTION_ID, decimal Original_AMOUNT, string Original_DESCRIPTION, System.DateTime Original_START_DATE, global::System.Nullable<global::System.DateTime> Original_END_DATE) {
             return this.Update(Original_CONNECTION_ID, AMOUNT, DESCRIPTION, START_DATE, END_DATE, Original_CONNECTION_ID, Original_AMOUNT, Original_DESCRIPTION, Original_START_DATE, Original_END_DATE);
+        }
+
+        internal void FillBy(CableMDBDataSet.CONNECTIONDataTable cONNECTIONDataTable)
+        {
+            throw new System.NotImplementedException();
         }
     }
     
