@@ -113,12 +113,12 @@ namespace CableMangementSystem
         {
             try
             {
-                SqlConnection conn = new SqlConnection("Data Source=LAPTOP-DC8AJAGQ;Initial Catalog=Temp;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM INVENTORY", conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
-                string[] colName = { "ITEM_NO", "ITEM_NAME", "QUANTITY" };
+                string[] colName = { "ITEM_NO", "ITEM", "QUANTITY" };
                 string data;
                 List<string> inventoryItem = new List<string>();
                 while (reader.Read())
@@ -144,6 +144,14 @@ namespace CableMangementSystem
         private void BillPendingToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pendingConnectionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PendingConnections pendConn = new PendingConnections();
+            pendConn.MdiParent = this;
+            pendConn.WindowState = FormWindowState.Maximized;
+            pendConn.Show();
         }
 
 

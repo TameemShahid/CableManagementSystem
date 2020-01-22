@@ -49,10 +49,9 @@
             // GenReportBtn
             // 
             this.GenReportBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.GenReportBtn.Location = new System.Drawing.Point(204, 596);
-            this.GenReportBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.GenReportBtn.Location = new System.Drawing.Point(50, 387);
             this.GenReportBtn.Name = "GenReportBtn";
-            this.GenReportBtn.Size = new System.Drawing.Size(1201, 45);
+            this.GenReportBtn.Size = new System.Drawing.Size(801, 29);
             this.GenReportBtn.TabIndex = 2;
             this.GenReportBtn.Text = "Generate Report ";
             this.GenReportBtn.UseVisualStyleBackColor = true;
@@ -62,20 +61,20 @@
             // 
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(37, 204);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView1.Location = new System.Drawing.Point(25, 133);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(1534, 366);
+            this.dataGridView1.Size = new System.Drawing.Size(1023, 238);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView_SelectionChanged);
             // 
             // SearchNameTxtBox
             // 
             this.SearchNameTxtBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchNameTxtBox.Location = new System.Drawing.Point(37, 62);
+            this.SearchNameTxtBox.Location = new System.Drawing.Point(25, 40);
+            this.SearchNameTxtBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SearchNameTxtBox.Name = "SearchNameTxtBox";
-            this.SearchNameTxtBox.Size = new System.Drawing.Size(1094, 26);
+            this.SearchNameTxtBox.Size = new System.Drawing.Size(731, 20);
             this.SearchNameTxtBox.TabIndex = 4;
             // 
             // CheckBoxGroupBox
@@ -89,9 +88,11 @@
             this.CheckBoxGroupBox.Controls.Add(this.UserNameCheckBox);
             this.CheckBoxGroupBox.Controls.Add(this.UserIdCheckBox);
             this.CheckBoxGroupBox.Controls.Add(this.HistoryIdCheckBox);
-            this.CheckBoxGroupBox.Location = new System.Drawing.Point(37, 114);
+            this.CheckBoxGroupBox.Location = new System.Drawing.Point(25, 74);
+            this.CheckBoxGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.CheckBoxGroupBox.Name = "CheckBoxGroupBox";
-            this.CheckBoxGroupBox.Size = new System.Drawing.Size(1534, 64);
+            this.CheckBoxGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CheckBoxGroupBox.Size = new System.Drawing.Size(1023, 42);
             this.CheckBoxGroupBox.TabIndex = 13;
             this.CheckBoxGroupBox.TabStop = false;
             this.CheckBoxGroupBox.Text = "Filters";
@@ -99,9 +100,10 @@
             // StatusCheckBox
             // 
             this.StatusCheckBox.AutoSize = true;
-            this.StatusCheckBox.Location = new System.Drawing.Point(1103, 25);
+            this.StatusCheckBox.Location = new System.Drawing.Point(735, 16);
+            this.StatusCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.StatusCheckBox.Name = "StatusCheckBox";
-            this.StatusCheckBox.Size = new System.Drawing.Size(86, 24);
+            this.StatusCheckBox.Size = new System.Drawing.Size(59, 17);
             this.StatusCheckBox.TabIndex = 20;
             this.StatusCheckBox.Text = "Status ";
             this.StatusCheckBox.UseVisualStyleBackColor = true;
@@ -109,9 +111,10 @@
             // MonthCheckBox
             // 
             this.MonthCheckBox.AutoSize = true;
-            this.MonthCheckBox.Location = new System.Drawing.Point(1002, 25);
+            this.MonthCheckBox.Location = new System.Drawing.Point(668, 16);
+            this.MonthCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MonthCheckBox.Name = "MonthCheckBox";
-            this.MonthCheckBox.Size = new System.Drawing.Size(80, 24);
+            this.MonthCheckBox.Size = new System.Drawing.Size(56, 17);
             this.MonthCheckBox.TabIndex = 19;
             this.MonthCheckBox.Text = "Month";
             this.MonthCheckBox.UseVisualStyleBackColor = true;
@@ -119,9 +122,10 @@
             // ReceiveCheckBox
             // 
             this.ReceiveCheckBox.AutoSize = true;
-            this.ReceiveCheckBox.Location = new System.Drawing.Point(858, 25);
+            this.ReceiveCheckBox.Location = new System.Drawing.Point(572, 16);
+            this.ReceiveCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ReceiveCheckBox.Name = "ReceiveCheckBox";
-            this.ReceiveCheckBox.Size = new System.Drawing.Size(123, 24);
+            this.ReceiveCheckBox.Size = new System.Drawing.Size(87, 17);
             this.ReceiveCheckBox.TabIndex = 18;
             this.ReceiveCheckBox.Text = "Recieved By";
             this.ReceiveCheckBox.UseVisualStyleBackColor = true;
@@ -129,9 +133,10 @@
             // PaymentCheckBox
             // 
             this.PaymentCheckBox.AutoSize = true;
-            this.PaymentCheckBox.Location = new System.Drawing.Point(740, 25);
+            this.PaymentCheckBox.Location = new System.Drawing.Point(493, 16);
+            this.PaymentCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PaymentCheckBox.Name = "PaymentCheckBox";
-            this.PaymentCheckBox.Size = new System.Drawing.Size(97, 24);
+            this.PaymentCheckBox.Size = new System.Drawing.Size(67, 17);
             this.PaymentCheckBox.TabIndex = 17;
             this.PaymentCheckBox.Text = "Payment\r\n";
             this.PaymentCheckBox.UseVisualStyleBackColor = true;
@@ -139,9 +144,10 @@
             // HouseCheckBox
             // 
             this.HouseCheckBox.AutoSize = true;
-            this.HouseCheckBox.Location = new System.Drawing.Point(637, 25);
+            this.HouseCheckBox.Location = new System.Drawing.Point(425, 16);
+            this.HouseCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HouseCheckBox.Name = "HouseCheckBox";
-            this.HouseCheckBox.Size = new System.Drawing.Size(82, 24);
+            this.HouseCheckBox.Size = new System.Drawing.Size(57, 17);
             this.HouseCheckBox.TabIndex = 16;
             this.HouseCheckBox.Text = "House\r\n";
             this.HouseCheckBox.UseVisualStyleBackColor = true;
@@ -149,9 +155,10 @@
             // UserNameCheckBox
             // 
             this.UserNameCheckBox.AutoSize = true;
-            this.UserNameCheckBox.Location = new System.Drawing.Point(501, 25);
+            this.UserNameCheckBox.Location = new System.Drawing.Point(334, 16);
+            this.UserNameCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UserNameCheckBox.Name = "UserNameCheckBox";
-            this.UserNameCheckBox.Size = new System.Drawing.Size(115, 24);
+            this.UserNameCheckBox.Size = new System.Drawing.Size(79, 17);
             this.UserNameCheckBox.TabIndex = 15;
             this.UserNameCheckBox.Text = "User Name";
             this.UserNameCheckBox.UseVisualStyleBackColor = true;
@@ -159,9 +166,10 @@
             // UserIdCheckBox
             // 
             this.UserIdCheckBox.AutoSize = true;
-            this.UserIdCheckBox.Location = new System.Drawing.Point(393, 25);
+            this.UserIdCheckBox.Location = new System.Drawing.Point(262, 16);
+            this.UserIdCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UserIdCheckBox.Name = "UserIdCheckBox";
-            this.UserIdCheckBox.Size = new System.Drawing.Size(87, 24);
+            this.UserIdCheckBox.Size = new System.Drawing.Size(60, 17);
             this.UserIdCheckBox.TabIndex = 14;
             this.UserIdCheckBox.Text = "User Id";
             this.UserIdCheckBox.UseVisualStyleBackColor = true;
@@ -169,9 +177,10 @@
             // HistoryIdCheckBox
             // 
             this.HistoryIdCheckBox.AutoSize = true;
-            this.HistoryIdCheckBox.Location = new System.Drawing.Point(270, 25);
+            this.HistoryIdCheckBox.Location = new System.Drawing.Point(180, 16);
+            this.HistoryIdCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.HistoryIdCheckBox.Name = "HistoryIdCheckBox";
-            this.HistoryIdCheckBox.Size = new System.Drawing.Size(102, 24);
+            this.HistoryIdCheckBox.Size = new System.Drawing.Size(70, 17);
             this.HistoryIdCheckBox.TabIndex = 13;
             this.HistoryIdCheckBox.Text = "History Id";
             this.HistoryIdCheckBox.UseVisualStyleBackColor = true;
@@ -179,19 +188,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 23);
+            this.label1.Location = new System.Drawing.Point(22, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 20);
+            this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 14;
             this.label1.Text = "Sql Query";
             // 
             // SearchCustomerBtn
             // 
             this.SearchCustomerBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.SearchCustomerBtn.Location = new System.Drawing.Point(1159, 53);
-            this.SearchCustomerBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.SearchCustomerBtn.Location = new System.Drawing.Point(773, 34);
             this.SearchCustomerBtn.Name = "SearchCustomerBtn";
-            this.SearchCustomerBtn.Size = new System.Drawing.Size(423, 45);
+            this.SearchCustomerBtn.Size = new System.Drawing.Size(282, 29);
             this.SearchCustomerBtn.TabIndex = 15;
             this.SearchCustomerBtn.Text = "Search Customer";
             this.SearchCustomerBtn.UseVisualStyleBackColor = true;
@@ -199,16 +208,15 @@
             // 
             // ReportForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1608, 740);
+            this.ClientSize = new System.Drawing.Size(913, 481);
             this.Controls.Add(this.SearchCustomerBtn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.CheckBoxGroupBox);
             this.Controls.Add(this.SearchNameTxtBox);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.GenReportBtn);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ReportForm";
             this.Text = "ReportForm";
             this.Load += new System.EventHandler(this.ReportForm_Load);

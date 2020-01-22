@@ -30,7 +30,7 @@ namespace CableMangementSystem
             try
             {
                 comboBox1.Items.Clear();
-                SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("LOAD_CITY", conn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -59,7 +59,7 @@ namespace CableMangementSystem
                 comboBox2.Enabled = true;
                 comboBox2.Items.Clear();
 
-                SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                 conn.Open();
 
                 SqlCommand cmd = new SqlCommand("LOAD_AREA_BY_CITY", conn);
@@ -95,7 +95,7 @@ namespace CableMangementSystem
             {
                 try
                 {
-                    SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+                    SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                     conn.Open();
 
                     SqlCommand cmd = new SqlCommand("ADD_BLOCK", conn);

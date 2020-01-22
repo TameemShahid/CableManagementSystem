@@ -5,13 +5,14 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B39A8039-E93F-40BD-B92E-678CB2A1FF55}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CableMangementSystem</RootNamespace>
     <AssemblyName>CableMangementSystem</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -72,6 +73,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAddress.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAddress.Designer.cs">
+      <DependentUpon>AddAddress.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddInventory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +120,12 @@
       <DependentUpon>City.cs</DependentUpon>
     </Compile>
     <Compile Include="ConnectionString.cs" />
+    <Compile Include="ConnStr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnStr.Designer.cs">
+      <DependentUpon>ConnStr.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditConnCharges.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +207,9 @@
     <Compile Include="UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddAddress.resx">
+      <DependentUpon>AddAddress.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddInventory.resx">
       <DependentUpon>AddInventory.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="City.resx">
       <DependentUpon>City.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnStr.resx">
+      <DependentUpon>ConnStr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditConnCharges.resx">
       <DependentUpon>EditConnCharges.cs</DependentUpon>
@@ -235,6 +254,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ReportForm.resx">
       <DependentUpon>ReportForm.cs</DependentUpon>

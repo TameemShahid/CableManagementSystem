@@ -39,8 +39,13 @@ namespace CableMangementSystem
                     conn.Open();
 
                     // verify col names 
-                    SqlCommand cmdUser = new SqlCommand($"SELECT EMAIL,USER_PASSWORD FROM USER_ WHERE EMAIL='{username}'", conn);
-                    SqlCommand cmdStaff = new SqlCommand($"SELECT EMAIL,STAFF_PASSWORD FROM HUMAN_RESOURCE WHERE EMAIL='{username}'", conn);
+                    SqlCommand cmdUser = new SqlCommand("VERIFY_USER", conn);
+                    cmdUser.CommandType = CommandType.StoredProcedure;
+                    cmdUser.Parameters.Add(new SqlParameter("@USER_EMAIL", username));
+
+                    SqlCommand cmdStaff = new SqlCommand("VERIFY_STAFF", conn);
+                    cmdStaff.CommandType = CommandType.StoredProcedure;
+                    cmdStaff.Parameters.Add(new SqlParameter("@STAFF_EMAIL", username));
 
                     SqlDataReader reader;
                     SqlDataReader readerStaff;

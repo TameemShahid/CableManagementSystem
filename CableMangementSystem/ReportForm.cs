@@ -36,7 +36,7 @@ namespace CableMangementSystem
                 SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
 
                 conn.Open();
-                SqlCommand command = new SqlCommand("SELECT * FROM HISTORY", conn);
+                SqlCommand command = new SqlCommand("SELECT * FROM SHOW_HISTORY", conn);
                 //commad.CommandType = CommandType.StoredProcedure;
 
 
@@ -77,7 +77,7 @@ namespace CableMangementSystem
 
                     /*only for testing use stored procedure*/
                     // change this for your revelant
-                    SqlCommand cmd = new SqlCommand("LOAD_USER_BY_ID", conn);
+                    SqlCommand cmd = new SqlCommand("LOAD_HISTORY_BY_USERID", conn);
 
                     /* uncommen for actual implementation  */
 
@@ -136,7 +136,7 @@ namespace CableMangementSystem
             {
 
                 SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
-                string query = "SELECT * FROM HISTORY";
+                string query = "LOAD_HISTORY_BY_USERNAME";
                 List<string> colName = new List<string>();
 
                 // string[] colName = { "HISTORY_ID", "USER_ID", "USER_NAME", "HOUSE", "PAYMENT", "RECEIVED_BY", "MONTH", "STATUS" };
@@ -149,13 +149,13 @@ namespace CableMangementSystem
                 if (UserIdCheckBox.CheckState == CheckState.Checked)
                     colName.Add("USER_ID");
                 if (UserNameCheckBox.CheckState == CheckState.Checked)
-                    colName.Add("USER_NAME"); // change this to NAME 
+                    colName.Add("NAME"); // change this to NAME 
                 if (HouseCheckBox.CheckState == CheckState.Checked)
                     colName.Add("HOUSE");
                 if (PaymentCheckBox.CheckState == CheckState.Checked)
                     colName.Add("PAYMENT");
                 if (ReceiveCheckBox.CheckState == CheckState.Checked)
-                    colName.Add("RECEIVED_BY");// change this to RECEIVED BY
+                    colName.Add("RECEIVED BY");// change this to RECEIVED BY
                 if (MonthCheckBox.CheckState == CheckState.Checked)
                     colName.Add("MONTH");
                 if (StatusCheckBox.CheckState == CheckState.Checked)
@@ -166,10 +166,10 @@ namespace CableMangementSystem
                     //colName.Add("*");
                     colName.Add("HISTORY_ID");
                     colName.Add("USER_ID");
-                    colName.Add("USER_NAME"); // change this to NAME 
+                    colName.Add("NAME"); // change this to NAME 
                     colName.Add("HOUSE");
                     colName.Add("PAYMENT");
-                    colName.Add("RECEIVED_BY");
+                    colName.Add("RECEIVED BY");
                     colName.Add("MONTH");
                     colName.Add("STATUS");
 
@@ -178,21 +178,15 @@ namespace CableMangementSystem
                 StringBuilder newSqlBuilder = new StringBuilder();
 
 
-                string comma;
-                for (int i = 0; i < colName.Count; i++)
-                {
-                    comma = (i == (colName.Count - 1) ? " " : ",");
-                    newSqlBuilder.Append(colName[i] + comma);
-                }
-
-                label1.Text = "SELECT " + newSqlBuilder.ToString() + $" FROM HISTORY WHERE USER_NAME='{searchName}';";
-                query = label1.Text;
-
+               
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@NAME", searchName);
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 string[] colNameArray = colName.ToArray();
+               
                 List<string> userHistory = new List<string>();
                 while (reader.Read())
                 {

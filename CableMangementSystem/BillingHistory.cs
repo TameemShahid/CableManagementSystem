@@ -31,7 +31,7 @@ namespace CableMangementSystem
             {
                 try
                 {
-                    SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+                    SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("LOAD_HISTORY_DATA", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -60,7 +60,7 @@ namespace CableMangementSystem
             {
                 try
                 {
-                    SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+                    SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("LOAD_HISTORY_BY_UNPAID", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -84,7 +84,7 @@ namespace CableMangementSystem
             {
                 try
                 {
-                    SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+                    SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("LOAD_HISTORY_BY_PAID", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -114,7 +114,7 @@ namespace CableMangementSystem
             {
                 try
                 {
-                    SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+                    SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                     conn.Open();
                     SqlCommand cmd = new SqlCommand("LOAD_HISTORY_BY_USERNAME", conn);
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -158,7 +158,7 @@ namespace CableMangementSystem
         {
             try
             {
-                SqlConnection conn = new SqlConnection("Data Source=TAMEEMTTG;Initial Catalog=CableMDB;Integrated Security=True");
+                SqlConnection conn = new SqlConnection(ConnectionString.connectionString);
                 conn.Open();
                 SqlCommand command = new SqlCommand("LOAD_HISTORY_DATA", conn);
                 command.CommandType = CommandType.StoredProcedure;
